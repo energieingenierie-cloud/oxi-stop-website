@@ -831,45 +831,20 @@ document.getElementById('orderbtn').addEventListener('click',async ()=>{
   btn.disabled=true;btn.innerHTML='Envoi en cours...';
 
   try{
-    const formData=new FormData();
-    formData.append('form-name','order');
-    formData.append('name',n);
-    formData.append('phone',p);
-    formData.append('gov',g);
-    formData.append('addr',a);
-    formData.append('quantity',document.getElementById('h-qty').value);
-    formData.append('total',document.getElementById('h-total').value);
+    const qty=document.getElementById('h-qty').value;
+    const total=document.getElementById('h-total').value;
+    const msg='🛒 Nouvelle commande OXI-STOP\n\n'+
+      'Nom: '+n+'\n'+
+      'Téléphone: '+p+'\n'+
+      'Gouvernorat: '+g+'\n'+
+      'Adresse: '+a+'\n'+
+      'Quantité: '+qty+' Bouteille(s)\n'+
+      'Total: '+total+' DT';
+    const waUrl='https://wa.me/21653016888?text='+encodeURIComponent(msg);
+    window.open(waUrl,'_blank');
 
-    // First attempt: Netlify Forms (site deployed to Netlify must register the hidden form)
-    let success=false;
-    try{
-      const res=await fetch('/',{method:'POST',body:formData});
-      if(res.ok) success=true;
-    }catch(_e){/* ignore and try Google Form fallback */}
-
-    // Fallback: Google Form (fire-and-forget, no-cors — Google blocks reading the response)
-    if(!success){
-      try{
-        const gForm=new FormData();
-        gForm.append('entry.2106027832',n);
-        gForm.append('entry.2146263607',p);
-        gForm.append('entry.1574655579',g);
-        gForm.append('entry.1296318898',a);
-        gForm.append('entry.2070862342',document.getElementById('h-qty').value);
-        gForm.append('entry.901638556',document.getElementById('h-total').value);
-        await fetch('https://docs.google.com/forms/d/e/1FAIpQLSfPKEhJYlvrE0UCTPrORwM_cALK-SVI09kDSF9O8d76ASAL5A/formResponse',{
-          method:'POST',mode:'no-cors',body:gForm
-        });
-        success=true; // no-cors: response unreadable, assume delivered if no network error
-      }catch(_e){/* ignore */}
-    }
-
-    if(success){
-      btn.innerHTML='✅ Commande confirmée — Tunitek vous contacte sous peu';
-      btn.style.background='#2e7d32';btn.style.borderColor='#1b5e20';
-    }else{
-      throw new Error('Erreur envoi');
-    }
+    btn.innerHTML='✅ Commande confirmée — Finalisez sur WhatsApp';
+    btn.style.background='#2e7d32';btn.style.borderColor='#1b5e20';
   }catch(e){
     btn.disabled=false;btn.innerHTML='Commander maintenant';
     alert('Erreur lors de l\'envoi. Veuillez réessayer ou contacter +216 53 016 888');
