@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="4P45Cb9i3QnaQYXAeSpuK9NGoqgOVXNShoqaeNbyOqI" />
 <title>OXI-STOP® Officiel — Anti-rouille &amp; Convertisseur de Rouille | Fabricant Tunitek Tunisie</title>
 <meta name="description" content="Site officiel OXI-STOP® — fabricant Tunitek, marque déposée INNORPI. Bouteille 1 LITRE dès 49 DT, paiement à la livraison partout en Tunisie. Désoxydant, désincrustant, passivant Food-grade : acier, inox, céramique, sanitaire, textile.">
 <meta property="og:title" content="OXI-STOP® Officiel — Anti-rouille 1L dès 49 DT | Fabricant Tunitek">
@@ -30,6 +31,8 @@
     <a href="#order" class="hcta">Commander</a>
   </div>
 </header>
+
+<main id="main">
 
 <!-- ══ HERO ══ -->
 <section id="hero">
@@ -72,11 +75,15 @@
     </div>
     <div class="vid-grid rev">
       <div class="vid-card">
-        <video src="assets/oxi-demo-1.mp4" controls muted playsinline preload="metadata"></video>
+        <video src="assets/oxi-demo-1.mp4" controls muted playsinline preload="metadata">
+          <track kind="captions" src="assets/oxi-demo-1.vtt" srclang="fr" label="Français">
+        </video>
         <div class="vid-card-lbl">🎥 Démonstration OXI-STOP® — Application terrain #1</div>
       </div>
       <div class="vid-card">
-        <video src="assets/oxi-demo-2.mp4" controls muted playsinline preload="metadata"></video>
+        <video src="assets/oxi-demo-2.mp4" controls muted playsinline preload="metadata">
+          <track kind="captions" src="assets/oxi-demo-2.vtt" srclang="fr" label="Français">
+        </video>
         <div class="vid-card-lbl">🎥 Démonstration OXI-STOP® — Application terrain #2</div>
       </div>
     </div>
@@ -415,8 +422,8 @@
       <div class="fg"><label class="fl">Nom complet *</label><input class="fi" type="text" placeholder="Votre nom et prénom" id="f-name"></div>
       <div class="fg"><label class="fl">Téléphone *</label><input class="fi" type="tel" placeholder="+216 XX XXX XXX" id="f-phone"></div>
       <div class="fg">
-        <label class="fl">Gouvernorat *</label>
-        <select class="fsl" id="f-gov">
+        <label class="fl" for="f-gov">Gouvernorat *</label>
+        <select class="fsl" id="f-gov" aria-label="Gouvernorat">
           <option value="">Sélectionnez votre gouvernorat</option>
           <option>Tunis</option><option>Ariana</option><option>Ben Arous</option><option>Manouba</option>
           <option>Nabeul</option><option>Zaghouan</option><option>Bizerte</option><option>Béja</option>
@@ -598,6 +605,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ══ FOOTER ══ -->
 <footer id="footer">
   <div class="footer-inner">
@@ -617,7 +626,7 @@
 
       <!-- Service Client -->
       <div class="fcol2">
-        <h4>Service Client</h4>
+        <h3>Service Client</h3>
         <ul>
           <li><span class="lbl">Téléphone</span></li>
           <li><a href="tel:+21653016888">+216 53 016 888</a></li>
@@ -629,7 +638,7 @@
 
       <!-- Liens -->
       <div class="fcol2">
-        <h4>Produit</h4>
+        <h3>Produit</h3>
         <ul>
           <li><a href="#videos">Vidéos</a></li>
           <li><a href="#gallery">Avant / Après</a></li>
@@ -646,7 +655,7 @@
 
       <!-- Ressources -->
       <div class="fcol2">
-        <h4>Ressources</h4>
+        <h3>Ressources</h3>
         <ul>
           <li><a href="assets/FICHE TECHNIQUE OXI-STOP JAN 2025.pdf" target="_blank">Fiche Technique (PDF)</a></li>
           <li><a href="#safety-bar">Précautions de sécurité</a></li>
@@ -753,7 +762,9 @@ if(heroBig) {
   vidWrap.className='ba-big-card';
   vidWrap.innerHTML=`
     <div class="ba-inner" style="aspect-ratio:16/7;background:#1a0800;display:flex;align-items:center;justify-content:center;">
-      <video src="assets/oxi-demo-1.mp4" style="height:100%;display:block;" controls muted playsinline preload="metadata"></video>
+      <video src="assets/oxi-demo-1.mp4" style="height:100%;display:block;" controls muted playsinline preload="metadata">
+        <track kind="captions" src="assets/oxi-demo-1.vtt" srclang="fr" label="Français">
+      </video>
     </div>`;
   heroBig.appendChild(vidWrap);
 }

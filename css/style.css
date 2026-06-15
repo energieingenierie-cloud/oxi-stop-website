@@ -232,7 +232,7 @@ ul{list-style:none;}
   padding:3px 11px;border-radius:4px;font-size:.71rem;font-weight:800;
   letter-spacing:.05em;text-transform:uppercase;pointer-events:none;
 }
-.ba-lb{left:10px;background:var(--org);color:#fff;} 
+.ba-lb{left:10px;background:var(--orgd);color:#fff;}
 .ba-la{right:10px;background:var(--green);color:#fff;} 
 .ba-lbl{
   padding:10px 14px;background:#fff;font-size:.82rem;font-weight:700;
@@ -509,7 +509,7 @@ ul{list-style:none;}
 .pqty{font-size:.77rem;color:var(--mid);font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px;} 
 .pamt{font-size:2.4rem;font-weight:900;color:#1a0800;margin:6px 0;line-height:1;} 
 .pamt sup{font-size:1.1rem;vertical-align:top;margin-top:5px;display:inline-block;color:var(--mid);} 
-.pold{font-size:.86rem;color:#bbb;text-decoration:line-through;margin-bottom:3px;} 
+.pold{font-size:.86rem;color:#767676;text-decoration:line-through;margin-bottom:3px;}
 .psave{display:inline-block;background:rgba(46,125,50,.09);border:1px solid rgba(46,125,50,.2);color:var(--green);font-size:.74rem;font-weight:700;padding:2px 10px;border-radius:50px;margin-bottom:16px;} 
 .pfeats{list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:8px;text-align:left;} 
 .pfeats li{display:flex;align-items:center;gap:8px;font-size:.81rem;color:#555;} 
@@ -527,10 +527,10 @@ ul{list-style:none;}
 #footer{background:#1a1a1a;color:#ccc;padding:52px 48px 0;} 
 .footer-inner{max-width:1280px;margin:0 auto;} 
 .footer-cols{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);} 
-.fcol2 h4{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin-bottom:14px;} 
-.fcol2 ul{display:flex;flex-direction:column;gap:7px;} 
-.fcol2 li{font-size:.81rem;color:#888;line-height:1.5;} 
-.fcol2 li a{color:#888;transition:color .2s;} 
+.fcol2 h3{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin-bottom:14px;}
+.fcol2 ul{display:flex;flex-direction:column;gap:7px;}
+.fcol2 li{font-size:.81rem;color:#999;line-height:1.5;}
+.fcol2 li a{color:#999;transition:color .2s;}
 .fcol2 li a:hover,.fcol2 li a:focus{color:var(--yellow);} 
 .fcol2 li .lbl{color:#ccc;font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:4px;} 
 .fcol2-logo{display:flex;flex-direction:column;align-items:flex-start;gap:12px;} 
